@@ -1,0 +1,2 @@
+C:\Users\User\Source\Repos\OOP_lab1\x64\Debug\OOP_lab1.exe
+C:\Users\User\Desktop\Лабораторная работа №1\OOP_lab1\x64\Debug\OOP_lab1.exe
