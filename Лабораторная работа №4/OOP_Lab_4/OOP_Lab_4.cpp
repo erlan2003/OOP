@@ -55,26 +55,38 @@
 //    string getName() const {
 //        return name;
 //    }
+//
+//    int FrCreator(const Kamaz& kamaz, const Tatra& tatra) {
+//        if (kamaz.getSpeed() > tatra.getSpeed()) {
+//            return 1;
+//        }
+//        else if (kamaz.getSpeed() < tatra.getSpeed()) {
+//            return -1;
+//        }
+//        else {
+//            return 0;
+//        }
+//    }
 //};
 //
-//int FrCreator(const Kamaz& kamaz, const Tatra& tatra) {
-//    if (kamaz.getSpeed() > tatra.getSpeed()) {
-//        return 1;
-//    }
-//    else if (kamaz.getSpeed() < tatra.getSpeed()) {
-//        return -1;
-//    }
-//    else {
-//        return 0;
-//    }
-//}
+////int FrCreator(const Kamaz& kamaz, const Tatra& tatra) {
+////    if (kamaz.getSpeed() > tatra.getSpeed()) {
+////        return 1;
+////    }
+////    else if (kamaz.getSpeed() < tatra.getSpeed()) {
+////        return -1;
+////    }
+////    else {
+////        return 0;
+////    }
+////}
 //
 //int main() {
 //    setlocale(LC_ALL, "rus");
 //    Kamaz kamaz("камаз1", 80);
 //    Tatra tatra("татра1", 90);
 //
-//    int result = FrCreator(kamaz, tatra);
+//    int result = tatra.FrCreator(kamaz, tatra);
 //
 //    if (result == 1) {
 //        kamaz.display();
@@ -236,7 +248,12 @@ public:
         return name;
     }
 
+
     friend class Tatra;
+
+  
+   
+
 
     friend int FrCreator(const Kamaz& kamaz, const Tatra& tatra);
 
@@ -262,6 +279,8 @@ public:
     string getName() const {
         return name;
     }
+
+
 
     friend int FrCreator(const Kamaz& kamaz, const Tatra& tatra);
 
@@ -313,6 +332,124 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+//#include <iostream>
+//#include <string>
+//
+//using namespace std;
+//
+//class Kamaz {
+//private:
+//    string name;
+//    double speed;
+//
+//public:
+//    Kamaz(const string& n, double s) : name(n), speed(s) {}
+//
+//    void display() const {
+//        cout << "Скорость Камаза '" << name << "' равна " << speed << " км/час" << endl;
+//    }
+//
+//    double getSpeed() const {
+//        return speed;
+//    }
+//
+//    string getName() const {
+//        return name;
+//    }
+//};
+//
+//class Tatra {
+//private:
+//    string name;
+//    double speed;
+//
+//public:
+//    Tatra(const string& n, double s) : name(n), speed(s) {}
+//
+//    void display() const {
+//        cout << "Скорость Татры '" << name << "' равна " << speed << " км/час" << endl;
+//    }
+//
+//    double getSpeed() const {
+//        return speed;
+//    }
+//
+//    string getName() const {
+//        return name;
+//    }
+//};
+//
+//class Stage {
+//private:
+//    string type;
+//    double kamazSpeed;
+//    double tatraSpeed;
+//
+//public:
+//    Stage(const string& t, double ks, double ts) : type(t), kamazSpeed(ks), tatraSpeed(ts) {}
+//
+//    string getType() const {
+//        return type;
+//    }
+//
+//    double getKamazSpeed() const {
+//        return kamazSpeed;
+//    }
+//
+//    double getTatraSpeed() const {
+//        return tatraSpeed;
+//    }
+//};
+//
+//int FrCreator(const Stage& stage) {
+//    if (stage.getKamazSpeed() > stage.getTatraSpeed()) {
+//        return 1;
+//    }
+//    else if (stage.getKamazSpeed() < stage.getTatraSpeed()) {
+//        return -1;
+//    }
+//    else {
+//        return 0;
+//    }
+//}
+//
+//void displayResults(const Stage& stage) {
+//    cout << "Результаты ралли-марафона:" << endl;
+//    cout << "----------------------------------------------" << endl;
+//    cout << "| Тип участка | Победитель |" << endl;
+//    cout << "----------------------------------------------" << endl;
+//    int result = FrCreator(stage);
+//    cout << "| " << stage.getType() << " | ";
+//    if (result == 1) {
+//        cout << "Камаз" << " |" << endl;
+//    }
+//    else if (result == -1) {
+//        cout << "Татра" << " |" << endl;
+//    }
+//    else {
+//        cout << "Ничья" << " |" << endl;
+//    }
+//    cout << "----------------------------------------------" << endl;
+//}
+//
+//int main() {
+//    setlocale(LC_ALL, "rus");
+//
+//    Stage stage1("Равнина", 80, 90);
+//    Stage stage2("Горы", 70, 85);
+//    Stage stage3("Пустыня", 100, 95);
+//
+//    displayResults(stage1);
+//    displayResults(stage2);
+//    displayResults(stage3);
+//
+//    return 0;
+//}
 
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
