@@ -1,0 +1,3 @@
+﻿  Srez.cpp
+C:\Users\User\Desktop\ООП\Srez\Srez.cpp(369,14): warning C4101: buffer: неиспользованная локальная переменная
+  Srez.vcxproj -> C:\Users\User\Desktop\ООП\Srez\x64\Debug\Srez.exe
